@@ -29,8 +29,8 @@ knit        : slidify::knit2slides
   <li>Create bubble chart</li>
   <li>Build simple webapp</li>
 </ul>
-
 </div>
+[>> Link to code](https://github.com/witusj/Vis)
 
 --- .class #slide2
 ## Google Style Bubble Chart
@@ -44,14 +44,14 @@ knit        : slidify::knit2slides
 
 
 <!-- BubbleChart generated in R 3.2.4 by googleVis 0.5.10 package -->
-<!-- Sun May 22 07:07:34 2016 -->
+<!-- Sun May 22 08:09:31 2016 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataBubbleChartIDb2b49728fcb () {
+function gvisDataBubbleChartIDbff591f266f () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -413,8 +413,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartBubbleChartIDb2b49728fcb() {
-var data = gvisDataBubbleChartIDb2b49728fcb();
+function drawChartBubbleChartIDbff591f266f() {
+var data = gvisDataBubbleChartIDbff591f266f();
 var options = {};
 options["title"] = "Wet- en Regelgeving wordt nog complexer en stringenter";
 options["hAxis"] = {minValue:1, maxValue:5, title:"Waarschijnlijkheid"};
@@ -423,7 +423,7 @@ options["width"] =    600;
 options["height"] =    600;
 
     var chart = new google.visualization.BubbleChart(
-    document.getElementById('BubbleChartIDb2b49728fcb')
+    document.getElementById('BubbleChartIDbff591f266f')
     );
     chart.draw(data,options);
     
@@ -447,9 +447,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartBubbleChartIDb2b49728fcb);
+callbacks.push(drawChartBubbleChartIDbff591f266f);
 })();
-function displayChartBubbleChartIDb2b49728fcb() {
+function displayChartBubbleChartIDbff591f266f() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -473,11 +473,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartIDb2b49728fcb"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartIDbff591f266f"></script>
  
 <!-- divChart -->
   
-<div id="BubbleChartIDb2b49728fcb" 
+<div id="BubbleChartIDbff591f266f" 
   style="width: 600; height: 600;">
 </div>
 
@@ -571,14 +571,14 @@ plot(Bubble)
 ```
 
 <!-- BubbleChart generated in R 3.2.4 by googleVis 0.5.10 package -->
-<!-- Sun May 22 07:07:35 2016 -->
+<!-- Sun May 22 08:09:32 2016 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataBubbleChartIDb2b22f76a59 () {
+function gvisDataBubbleChartIDbffd1cafeb () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -940,8 +940,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartBubbleChartIDb2b22f76a59() {
-var data = gvisDataBubbleChartIDb2b22f76a59();
+function drawChartBubbleChartIDbffd1cafeb() {
+var data = gvisDataBubbleChartIDbffd1cafeb();
 var options = {};
 options["title"] = "Wet- en Regelgeving wordt nog complexer en stringenter";
 options["hAxis"] = {minValue:1, maxValue:5, title:"Waarschijnlijkheid"};
@@ -950,7 +950,7 @@ options["width"] =    600;
 options["height"] =    600;
 
     var chart = new google.visualization.BubbleChart(
-    document.getElementById('BubbleChartIDb2b22f76a59')
+    document.getElementById('BubbleChartIDbffd1cafeb')
     );
     chart.draw(data,options);
     
@@ -974,9 +974,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartBubbleChartIDb2b22f76a59);
+callbacks.push(drawChartBubbleChartIDbffd1cafeb);
 })();
-function displayChartBubbleChartIDb2b22f76a59() {
+function displayChartBubbleChartIDbffd1cafeb() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1000,16 +1000,16 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartIDb2b22f76a59"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartIDbffd1cafeb"></script>
  
 <!-- divChart -->
   
-<div id="BubbleChartIDb2b22f76a59" 
+<div id="BubbleChartIDbffd1cafeb" 
   style="width: 600; height: 600;">
 </div>
 
 --- .class #slide7
-## Shiny App
+## Shiny Apps
 
 <style>
 #slide7 {

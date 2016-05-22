@@ -29,8 +29,8 @@ knit        : slidify::knit2slides
   <li>Create bubble chart</li>
   <li>Build simple webapp</li>
 </ul>
-
 </div>
+[>> Link to code](https://github.com/witusj/Vis)
 
 --- .class #slide2
 ## Google Style Bubble Chart
@@ -136,7 +136,7 @@ plot(Bubble)
 ``` 
 
 --- .class #slide7
-## Shiny App
+## Shiny Apps
 
 <style>
 #slide7 {
