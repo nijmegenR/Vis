@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visualizations</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Visualizations">
+  <meta name="author" content="Witek ten Hove, MBA">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/CFA2016/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/CFA2016/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/CFA2016/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/CFA2016/js/slides" 
+    src="libraries/frameworks/CFA2016/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Visualizations</h1>
+    <h2>with R and Shiny</h2>
+    <p>Witek ten Hove, MBA<br/>Instructor HAN BKMER</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="slide1" style="background:;">
+  <article data-timings="">
+    <style>
+#slide1 {
+  background-color:#cc99ff;
+}
+</style>
+
+<div style='float:left;width:50%;background-image: url("assets/img/wecan.jpg"); height: 650px; width: 500px;color:#FFF;'>
+</div>
+
+<div style='float:right;width:47%;'>
+<h2>Learn By Doing</h2>
+<ul>
+  <li>Read data</li>
+  <li>Restructure data</li>
+  <li>Create bubble chart</li>
+  <li>Build simple webapp</li>
+</ul>
+
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide2" style="background:;">
+  <hgroup>
+    <h2>Google Style Bubble Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide2 {
+  background-color:#ffb366;
+}
+</style>
+
+<!-- BubbleChart generated in R 3.2.4 by googleVis 0.5.10 package -->
+
+<!-- Sun May 22 07:07:34 2016 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataBubbleChartIDb2b49728fcb () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Aiden",
+2,
+4,
+"Kans" 
+],
+[
+ "Logan",
+4,
+5,
+"Kans" 
+],
+[
+ "Elijah",
+3,
+5,
+"Kans" 
+],
+[
+ "Daniel",
+3,
+3,
+"Kans" 
+],
+[
+ "Wyatt",
+4,
+2,
+"Kans" 
+],
+[
+ "Grayson",
+2,
+4,
+"Kans" 
+],
+[
+ "Harper",
+1,
+4,
+"Kans" 
+],
+[
+ "Amelia",
+3,
+3,
+"Kans" 
+],
+[
+ "Abigail",
+3,
+3,
+"Kans" 
+],
+[
+ "Evelyn",
+4,
+4,
+"Kans" 
+],
+[
+ "Scarlett",
+4,
+3,
+"Kans" 
+],
+[
+ "Aubrey",
+4,
+4,
+"Kans" 
+],
+[
+ "Addison",
+3,
+4,
+"Kans" 
+],
+[
+ "Liam",
+5,
+3,
+"Bedreiging" 
+],
+[
+ "Noah",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Ethan",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Mason",
+2,
+4,
+"Bedreiging" 
+],
+[
+ "Lucas",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Oliver",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "James",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Benjamin",
+3,
+5,
+"Bedreiging" 
+],
+[
+ "Jacob",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Jackson",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Michael",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Jack",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Alexander",
+2,
+4,
+"Bedreiging" 
+],
+[
+ "William",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Carter",
+4,
+3,
+"Bedreiging" 
+],
+[
+ "Luke",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Henry",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Gabriel",
+5,
+5,
+"Bedreiging" 
+],
+[
+ "Owen",
+2,
+5,
+"Bedreiging" 
+],
+[
+ "Matthew",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Sebastian",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Ryan",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Emma",
+2,
+5,
+"Bedreiging" 
+],
+[
+ "Olivia",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Ava",
+2,
+2,
+"Bedreiging" 
+],
+[
+ "Sophia",
+5,
+4,
+"Bedreiging" 
+],
+[
+ "Isabella",
+5,
+4,
+"Bedreiging" 
+],
+[
+ "Mia",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Charlotte",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Emily",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Ella",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Madison",
+2,
+5,
+"Bedreiging" 
+],
+[
+ "Avery",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Lily",
+3,
+3,
+"Bedreiging" 
+],
+[
+ "Sofia",
+4,
+3,
+"Bedreiging" 
+],
+[
+ "Chloe",
+4,
+3,
+"Bedreiging" 
+],
+[
+ "Aria",
+4,
+3,
+"Bedreiging" 
+],
+[
+ "Riley",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Layla",
+5,
+5,
+"Bedreiging" 
+],
+[
+ "Hannah",
+4,
+5,
+"Bedreiging" 
+],
+[
+ "Ellie",
+5,
+5,
+"Bedreiging" 
+],
+[
+ "Elizabeth",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Zoe",
+2,
+2,
+"Bedreiging" 
+],
+[
+ "Victoria",
+5,
+4,
+"Bedreiging" 
+],
+[
+ "Mila",
+4,
+3,
+"Bedreiging" 
+] 
+];
+data.addColumn('string','Voor.en.achternaam');
+data.addColumn('number','Waarschijnlijkheid');
+data.addColumn('number','Gevolgen');
+data.addColumn('string','Kans.of.bedreiging');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartBubbleChartIDb2b49728fcb() {
+var data = gvisDataBubbleChartIDb2b49728fcb();
+var options = {};
+options["title"] = "Wet- en Regelgeving wordt nog complexer en stringenter";
+options["hAxis"] = {minValue:1, maxValue:5, title:"Waarschijnlijkheid"};
+options["vAxis"] = {minValue:1, maxValue:5, title:"Gevolgen"};
+options["width"] =    600;
+options["height"] =    600;
+
+    var chart = new google.visualization.BubbleChart(
+    document.getElementById('BubbleChartIDb2b49728fcb')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartBubbleChartIDb2b49728fcb);
+})();
+function displayChartBubbleChartIDb2b49728fcb() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartIDb2b49728fcb"></script>
+ 
+
+<!-- divChart -->
+
+<div id="BubbleChartIDb2b49728fcb" 
+  style="width: 600; height: 600;">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide3" style="background:;">
+  <hgroup>
+    <h2>Step 1: Load Necessary Libraries</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide3 {
+  background-color:#99ccff;
+}
+</style>
+
+<pre><code class="r">library(gsheet) # For reading data from Google Spreadsheets
+library(googleVis) # For building interactive charts
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide4" style="background:;">
+  <hgroup>
+    <h2>Step 2: Read Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide4 {
+  background-color:#85e085;
+}
+</style>
+
+<pre><code class="r">rawData &lt;-
+  gsheet2tbl(
+    &#39;https://docs.google.com/spreadsheets/d/...../edit?usp=sharing&#39;
+  )
+</code></pre>
+
+<pre><code>## Observations: 58
+## Variables: 6
+## $ Tijdstempel        (chr) &quot;18-4-2016 18:18:39&quot;, &quot;20-4-2016 13:54:31&quot;,...
+## $ Voor.en.achternaam (chr) &quot;Liam&quot;, &quot;Noah&quot;, &quot;Ethan&quot;, &quot;Mason&quot;, &quot;Lucas&quot;, ...
+## $ Waarschijnlijkheid (int) 5, 3, 4, 2, 3, 4, 2, 4, 4, 3, 3, 4, 4, 4, 4...
+## $ Gevolgen           (int) 3, 4, 4, 4, 4, 4, 4, 5, 4, 5, 5, 4, 4, 4, 4...
+## $ Kans.of.bedreiging (chr) &quot;Bedreiging&quot;, &quot;Bedreiging&quot;, &quot;Bedreiging&quot;, &quot;...
+## $ Toelichting        (chr) &quot;Banken hebben steeds meer toegang tot data...
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide5" style="background:;">
+  <hgroup>
+    <h2>Step 3: Restructure and Build</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide5 {
+  background-color:#ff99cc;
+}
+</style>
+
+<pre><code class="r"># Change table into class data frame
+rawData &lt;- as.data.frame(rawData)
+
+# Ordering of the coloring variable is necessary for logical color matching
+newData &lt;- rawData[order(rawData[,&#39;Kans.of.bedreiging&#39;], decreasing = TRUE),]
+
+# Build the bubble chart
+Bubble &lt;- gvisBubbleChart(newData,
+                          idvar=&quot;Voor.en.achternaam&quot;, 
+                          xvar=&quot;Waarschijnlijkheid&quot;, yvar=&quot;Gevolgen&quot;,
+                          colorvar=&quot;Kans.of.bedreiging&quot;,
+                          options=list(
+                           title=&quot;Wet- en Regelgeving wordt nog complexer 
+                                  en stringenter&quot;,
+                           hAxis=&#39;{minValue:1, maxValue:5, title:&quot;Waarschijnlijkheid&quot;}&#39;,
+                           vAxis=&#39;{minValue:1, maxValue:5, title:&quot;Gevolgen&quot;}&#39;,
+                          width = 600,
+                          height = 600))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide6" style="background:;">
+  <hgroup>
+    <h2>Step 4: Plot The Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide6 {
+  background-color:#6fdcdc;
+}
+</style>
+
+<pre><code class="r">plot(Bubble)
+</code></pre>
+
+<!-- BubbleChart generated in R 3.2.4 by googleVis 0.5.10 package -->
+
+<!-- Sun May 22 07:07:35 2016 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataBubbleChartIDb2b22f76a59 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Aiden",
+2,
+4,
+"Kans" 
+],
+[
+ "Logan",
+4,
+5,
+"Kans" 
+],
+[
+ "Elijah",
+3,
+5,
+"Kans" 
+],
+[
+ "Daniel",
+3,
+3,
+"Kans" 
+],
+[
+ "Wyatt",
+4,
+2,
+"Kans" 
+],
+[
+ "Grayson",
+2,
+4,
+"Kans" 
+],
+[
+ "Harper",
+1,
+4,
+"Kans" 
+],
+[
+ "Amelia",
+3,
+3,
+"Kans" 
+],
+[
+ "Abigail",
+3,
+3,
+"Kans" 
+],
+[
+ "Evelyn",
+4,
+4,
+"Kans" 
+],
+[
+ "Scarlett",
+4,
+3,
+"Kans" 
+],
+[
+ "Aubrey",
+4,
+4,
+"Kans" 
+],
+[
+ "Addison",
+3,
+4,
+"Kans" 
+],
+[
+ "Liam",
+5,
+3,
+"Bedreiging" 
+],
+[
+ "Noah",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Ethan",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Mason",
+2,
+4,
+"Bedreiging" 
+],
+[
+ "Lucas",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Oliver",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "James",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Benjamin",
+3,
+5,
+"Bedreiging" 
+],
+[
+ "Jacob",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Jackson",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Michael",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Jack",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Alexander",
+2,
+4,
+"Bedreiging" 
+],
+[
+ "William",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Carter",
+4,
+3,
+"Bedreiging" 
+],
+[
+ "Luke",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Henry",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Gabriel",
+5,
+5,
+"Bedreiging" 
+],
+[
+ "Owen",
+2,
+5,
+"Bedreiging" 
+],
+[
+ "Matthew",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Sebastian",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Ryan",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Emma",
+2,
+5,
+"Bedreiging" 
+],
+[
+ "Olivia",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Ava",
+2,
+2,
+"Bedreiging" 
+],
+[
+ "Sophia",
+5,
+4,
+"Bedreiging" 
+],
+[
+ "Isabella",
+5,
+4,
+"Bedreiging" 
+],
+[
+ "Mia",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Charlotte",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Emily",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Ella",
+3,
+4,
+"Bedreiging" 
+],
+[
+ "Madison",
+2,
+5,
+"Bedreiging" 
+],
+[
+ "Avery",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Lily",
+3,
+3,
+"Bedreiging" 
+],
+[
+ "Sofia",
+4,
+3,
+"Bedreiging" 
+],
+[
+ "Chloe",
+4,
+3,
+"Bedreiging" 
+],
+[
+ "Aria",
+4,
+3,
+"Bedreiging" 
+],
+[
+ "Riley",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Layla",
+5,
+5,
+"Bedreiging" 
+],
+[
+ "Hannah",
+4,
+5,
+"Bedreiging" 
+],
+[
+ "Ellie",
+5,
+5,
+"Bedreiging" 
+],
+[
+ "Elizabeth",
+4,
+4,
+"Bedreiging" 
+],
+[
+ "Zoe",
+2,
+2,
+"Bedreiging" 
+],
+[
+ "Victoria",
+5,
+4,
+"Bedreiging" 
+],
+[
+ "Mila",
+4,
+3,
+"Bedreiging" 
+] 
+];
+data.addColumn('string','Voor.en.achternaam');
+data.addColumn('number','Waarschijnlijkheid');
+data.addColumn('number','Gevolgen');
+data.addColumn('string','Kans.of.bedreiging');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartBubbleChartIDb2b22f76a59() {
+var data = gvisDataBubbleChartIDb2b22f76a59();
+var options = {};
+options["title"] = "Wet- en Regelgeving wordt nog complexer en stringenter";
+options["hAxis"] = {minValue:1, maxValue:5, title:"Waarschijnlijkheid"};
+options["vAxis"] = {minValue:1, maxValue:5, title:"Gevolgen"};
+options["width"] =    600;
+options["height"] =    600;
+
+    var chart = new google.visualization.BubbleChart(
+    document.getElementById('BubbleChartIDb2b22f76a59')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartBubbleChartIDb2b22f76a59);
+})();
+function displayChartBubbleChartIDb2b22f76a59() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartIDb2b22f76a59"></script>
+ 
+
+<!-- divChart -->
+
+<div id="BubbleChartIDb2b22f76a59" 
+  style="width: 600; height: 600;">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide7" style="background:;">
+  <hgroup>
+    <h2>Shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide7 {
+  background-color:#ffe066;
+}
+</style>
+
+<p><a href="https://tenhove.shinyapps.io/Vis1/">Risk Map App</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide8" style="background:;">
+  <hgroup>
+    <h2>Step 1: Load Necessary Libraries and Run Data Script</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide8 {
+  background-color:#99ccff;
+}
+</style>
+
+<pre><code class="r">library(shiny)
+source(&quot;Data.R&quot;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide9" style="background:;">
+  <hgroup>
+    <h2>Step 2: Create User Interface</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide9 {
+  background-color:#79d2a6;
+}
+</style>
+
+<pre><code class="r">ui &lt;- shinyUI(fluidPage(
+  titlePanel(&quot;Retail Banking Risk Mapping&quot;),
+
+  sidebarLayout(position = &quot;left&quot;,
+
+## Sidebar with checkboxes 
+                sidebarPanel(checkboxGroupInput(&quot;checkGroup&quot;, 
+                                                label = &quot;Perceptie&quot;, 
+                                                choices = list(&quot;Kans&quot;, 
+                                                               &quot;Bedreiging&quot;),
+                                                selected = c(&quot;Kans&quot;, &quot;Bedreiging&quot;))),
+## Mainpanel with bubble chart
+                mainPanel(h2(&quot;Risk Map&quot;),
+                          htmlOutput(&quot;maps&quot;))
+  )
+))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide10" style="background:;">
+  <hgroup>
+    <h2>Step 3.1: Define Server and Create Subsetted Data Frame</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide10 {
+  background-color:#ffbf80;
+}
+</style>
+
+<pre><code class="r">server &lt;- shinyServer(function(input, output) { ## Begin of server
+
+## Subset the initial data frame by the values of the selected checkboxes
+df &lt;- reactive({
+  newData[newData$Kans.of.bedreiging %in% input$checkGroup, c(2:5)]
+  })
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide11" style="background:;">
+  <hgroup>
+    <h2>Step 3.2: Within Server Build Bubble Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide11 {
+  background-color:#99b3ff;
+}
+</style>
+
+<pre><code class="r">output$maps &lt;-
+    renderGvis({
+      gvisBubbleChart(
+        df(), idvar = &quot;Voor.en.achternaam&quot;,
+        xvar = &quot;Waarschijnlijkheid&quot;, yvar = &quot;Gevolgen&quot;,
+        colorvar = &quot;Kans.of.bedreiging&quot;,
+        options = list(
+          hAxis = &#39;{minValue:1, maxValue:5, title:&quot;Gevolgen&quot;}&#39;,
+          vAxis = &#39;{minValue:1, maxValue:5, title:&quot;Waarschijnlijkheid&quot;}&#39;,
+          width = 700,
+          height = 700
+        )
+      )
+    })
+  }) ## End of server
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide12" style="background:;">
+  <hgroup>
+    <h2>Step 4: Run the App</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide12 {
+  background-color:#ff4da6;
+}
+</style>
+
+<pre><code class="r">shinyApp(ui = ui, server = server)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide13" style="background:;">
+  <hgroup>
+    <h2>A More Sophisticated Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+#slide13 {
+  background-color:#99cc00;
+}
+</style>
+
+<p><a href="https://tenhove.shinyapps.io/Survey/">Sophisticated Risk Map App</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Google Style Bubble Chart'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Step 1: Load Necessary Libraries'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Step 2: Read Data'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Step 3: Restructure and Build'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Step 4: Plot The Chart'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Shiny App'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Step 1: Load Necessary Libraries and Run Data Script'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Step 2: Create User Interface'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Step 3.1: Define Server and Create Subsetted Data Frame'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Step 3.2: Within Server Build Bubble Chart'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Step 4: Run the App'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='A More Sophisticated Example'>
+         13
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

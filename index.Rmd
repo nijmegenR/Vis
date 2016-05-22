@@ -1,0 +1,259 @@
+---
+title       : Visualizations
+subtitle    : with R and Shiny
+author      : Witek ten Hove, MBA
+job         : Instructor HAN BKMER
+framework   : CFA2016        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [quiz]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+--- .class #slide1 
+
+
+<style>
+#slide1 {
+  background-color:#cc99ff;
+}
+</style>
+
+<div style='float:left;width:50%;background-image: url("assets/img/wecan.jpg"); height: 650px; width: 500px;color:#FFF;'>
+</div>
+<div style='float:right;width:47%;'>
+<h2>Learn By Doing</h2>
+<ul>
+  <li>Read data</li>
+  <li>Restructure data</li>
+  <li>Create bubble chart</li>
+  <li>Build simple webapp</li>
+</ul>
+
+</div>
+
+--- .class #slide2
+## Google Style Bubble Chart
+
+<style>
+#slide2 {
+  background-color:#ffb366;
+}
+</style>
+
+```{r include=FALSE}
+suppressPackageStartupMessages(library(googleVis))
+library(googleVis)
+op <- options(gvis.plot.tag="chart")
+source("Data.R")
+```
+
+```{r results='asis', tidy=TRUE, echo=FALSE}
+plot(Bubble)
+``` 
+
+--- .class #slide3
+## Step 1: Load Necessary Libraries
+
+<style>
+#slide3 {
+  background-color:#99ccff;
+}
+</style>
+
+```{r eval=FALSE}
+library(gsheet) # For reading data from Google Spreadsheets
+library(googleVis) # For building interactive charts
+```
+
+--- .class #slide4
+## Step 2: Read Data
+
+<style>
+#slide4 {
+  background-color:#85e085;
+}
+</style>
+
+```{r eval=FALSE}
+rawData <-
+  gsheet2tbl(
+    'https://docs.google.com/spreadsheets/d/...../edit?usp=sharing'
+  )
+```
+
+```{r results='markup', tidy=TRUE, echo=FALSE, message=FALSE}
+source("Data.R")
+dplyr::glimpse(rawData)
+```
+
+--- .class #slide5
+## Step 3: Restructure and Build
+
+<style>
+#slide5 {
+  background-color:#ff99cc;
+}
+</style>
+
+```{r eval=FALSE}
+# Change table into class data frame
+rawData <- as.data.frame(rawData)
+
+# Ordering of the coloring variable is necessary for logical color matching
+newData <- rawData[order(rawData[,'Kans.of.bedreiging'], decreasing = TRUE),]
+
+# Build the bubble chart
+Bubble <- gvisBubbleChart(newData,
+                          idvar="Voor.en.achternaam", 
+                          xvar="Waarschijnlijkheid", yvar="Gevolgen",
+                          colorvar="Kans.of.bedreiging",
+                          options=list(
+                           title="Wet- en Regelgeving wordt nog complexer 
+                                  en stringenter",
+                           hAxis='{minValue:1, maxValue:5, title:"Waarschijnlijkheid"}',
+                           vAxis='{minValue:1, maxValue:5, title:"Gevolgen"}',
+                          width = 600,
+                          height = 600))
+```
+
+--- .class #slide6
+## Step 4: Plot The Chart
+
+<style>
+#slide6 {
+  background-color:#6fdcdc;
+}
+</style>
+
+```{r eval=FALSE}
+plot(Bubble)
+```
+
+```{r results='asis', tidy=TRUE, echo=FALSE, message=FALSE}
+source("Data.R")
+plot(Bubble)
+``` 
+
+--- .class #slide7
+## Shiny App
+
+<style>
+#slide7 {
+  background-color:#ffe066;
+}
+</style>
+
+[Risk Map App](https://tenhove.shinyapps.io/Vis1/)
+
+--- .class #slide8
+## Step 1: Load Necessary Libraries and Run Data Script
+
+<style>
+#slide8 {
+  background-color:#99ccff;
+}
+</style>
+
+```{r eval=FALSE}
+library(shiny)
+source("Data.R")
+```
+
+
+--- .class #slide9
+## Step 2: Create User Interface
+
+<style>
+#slide9 {
+  background-color:#79d2a6;
+}
+</style>
+
+```{r eval=FALSE}
+ui <- shinyUI(fluidPage(
+  titlePanel("Retail Banking Risk Mapping"),
+ 
+  sidebarLayout(position = "left",
+
+## Sidebar with checkboxes 
+                sidebarPanel(checkboxGroupInput("checkGroup", 
+                                                label = "Perceptie", 
+                                                choices = list("Kans", 
+                                                               "Bedreiging"),
+                                                selected = c("Kans", "Bedreiging"))),
+## Mainpanel with bubble chart
+                mainPanel(h2("Risk Map"),
+                          htmlOutput("maps"))
+  )
+))
+```
+
+--- .class #slide10
+## Step 3.1: Define Server and Create Subsetted Data Frame
+
+<style>
+#slide10 {
+  background-color:#ffbf80;
+}
+</style>
+
+```{r eval=FALSE}
+server <- shinyServer(function(input, output) { ## Begin of server
+  
+## Subset the initial data frame by the values of the selected checkboxes
+df <- reactive({
+  newData[newData$Kans.of.bedreiging %in% input$checkGroup, c(2:5)]
+  })
+```
+
+--- .class #slide11
+## Step 3.2: Within Server Build Bubble Chart
+
+<style>
+#slide11 {
+  background-color:#99b3ff;
+}
+</style>
+
+```{r eval=FALSE}
+output$maps <-
+    renderGvis({
+      gvisBubbleChart(
+        df(), idvar = "Voor.en.achternaam",
+        xvar = "Waarschijnlijkheid", yvar = "Gevolgen",
+        colorvar = "Kans.of.bedreiging",
+        options = list(
+          hAxis = '{minValue:1, maxValue:5, title:"Gevolgen"}',
+          vAxis = '{minValue:1, maxValue:5, title:"Waarschijnlijkheid"}',
+          width = 700,
+          height = 700
+        )
+      )
+    })
+  }) ## End of server
+```
+
+--- .class #slide12
+## Step 4: Run the App
+
+<style>
+#slide12 {
+  background-color:#ff4da6;
+}
+</style>
+
+```{r eval=FALSE}
+shinyApp(ui = ui, server = server)
+```
+
+--- .class #slide13
+## A More Sophisticated Example
+
+<style>
+#slide13 {
+  background-color:#99cc00;
+}
+</style>
+
+[Sophisticated Risk Map App](https://tenhove.shinyapps.io/Survey/)
