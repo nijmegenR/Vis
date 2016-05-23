@@ -50,6 +50,7 @@ server <- shinyServer(function(input, output) {
         yvar = "Gevolgen",
         colorvar = "Kans.of.bedreiging",
         options = list(
+          title="Wet- en Regelgeving wordt nog complexer en stringenter",
           hAxis = '{minValue:1, maxValue:5, title:"Gevolgen"}',
           vAxis = '{minValue:1, maxValue:5, title:"Waarschijnlijkheid"}',
           width = 700,

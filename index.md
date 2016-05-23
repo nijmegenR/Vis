@@ -44,14 +44,14 @@ knit        : slidify::knit2slides
 
 
 <!-- BubbleChart generated in R 3.2.4 by googleVis 0.5.10 package -->
-<!-- Sun May 22 08:09:31 2016 -->
+<!-- Mon May 23 21:48:54 2016 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataBubbleChartIDbff591f266f () {
+function gvisDataBubbleChartID138a6425791e () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -413,8 +413,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartBubbleChartIDbff591f266f() {
-var data = gvisDataBubbleChartIDbff591f266f();
+function drawChartBubbleChartID138a6425791e() {
+var data = gvisDataBubbleChartID138a6425791e();
 var options = {};
 options["title"] = "Wet- en Regelgeving wordt nog complexer en stringenter";
 options["hAxis"] = {minValue:1, maxValue:5, title:"Waarschijnlijkheid"};
@@ -423,7 +423,7 @@ options["width"] =    600;
 options["height"] =    600;
 
     var chart = new google.visualization.BubbleChart(
-    document.getElementById('BubbleChartIDbff591f266f')
+    document.getElementById('BubbleChartID138a6425791e')
     );
     chart.draw(data,options);
     
@@ -447,9 +447,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartBubbleChartIDbff591f266f);
+callbacks.push(drawChartBubbleChartID138a6425791e);
 })();
-function displayChartBubbleChartIDbff591f266f() {
+function displayChartBubbleChartID138a6425791e() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -473,11 +473,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartIDbff591f266f"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartID138a6425791e"></script>
  
 <!-- divChart -->
   
-<div id="BubbleChartIDbff591f266f" 
+<div id="BubbleChartID138a6425791e" 
   style="width: 600; height: 600;">
 </div>
 
@@ -571,14 +571,14 @@ plot(Bubble)
 ```
 
 <!-- BubbleChart generated in R 3.2.4 by googleVis 0.5.10 package -->
-<!-- Sun May 22 08:09:32 2016 -->
+<!-- Mon May 23 21:48:55 2016 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataBubbleChartIDbffd1cafeb () {
+function gvisDataBubbleChartID138a668ca658 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -940,8 +940,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartBubbleChartIDbffd1cafeb() {
-var data = gvisDataBubbleChartIDbffd1cafeb();
+function drawChartBubbleChartID138a668ca658() {
+var data = gvisDataBubbleChartID138a668ca658();
 var options = {};
 options["title"] = "Wet- en Regelgeving wordt nog complexer en stringenter";
 options["hAxis"] = {minValue:1, maxValue:5, title:"Waarschijnlijkheid"};
@@ -950,7 +950,7 @@ options["width"] =    600;
 options["height"] =    600;
 
     var chart = new google.visualization.BubbleChart(
-    document.getElementById('BubbleChartIDbffd1cafeb')
+    document.getElementById('BubbleChartID138a668ca658')
     );
     chart.draw(data,options);
     
@@ -974,9 +974,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartBubbleChartIDbffd1cafeb);
+callbacks.push(drawChartBubbleChartID138a668ca658);
 })();
-function displayChartBubbleChartIDbffd1cafeb() {
+function displayChartBubbleChartID138a668ca658() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1000,11 +1000,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartIDbffd1cafeb"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartID138a668ca658"></script>
  
 <!-- divChart -->
   
-<div id="BubbleChartIDbffd1cafeb" 
+<div id="BubbleChartID138a668ca658" 
   style="width: 600; height: 600;">
 </div>
 
@@ -1101,6 +1101,7 @@ output$maps <-
         xvar = "Waarschijnlijkheid", yvar = "Gevolgen",
         colorvar = "Kans.of.bedreiging",
         options = list(
+          title="Wet- en Regelgeving wordt nog complexer en stringenter",
           hAxis = '{minValue:1, maxValue:5, title:"Gevolgen"}',
           vAxis = '{minValue:1, maxValue:5, title:"Waarschijnlijkheid"}',
           width = 700,
